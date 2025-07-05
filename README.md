@@ -1,3 +1,4 @@
+
 # VelvetFlow: A Robust Multi-Density Clustering Pipeline
 
 ## Overview
@@ -23,23 +24,28 @@ This repository includes the full implementation of VelvetFlow, hyperparameter t
 
 ```
 .
-├── velvetflow_results/           # Contains 4 notebooks, one per dataset
+├── dataset/                      # Input datasets used for clustering experiments
+│   ├── synthetic.txt
+│   ├── jain.txt
+│   ├── isolation.txt
+│   └── compound.txt
+├── velvetflow_results/          # Contains 4 notebooks, one per dataset
 │   ├── VelvetFlow_synthetic.ipynb
 │   ├── VelvetFlow_jain.ipynb
 │   ├── VelvetFlow_isolated.ipynb
 │   └── VelvetFlow_compound.ipynb
-├── MDBSCAN_results.ipynb         # Notebook running MDBSCAN across all datasets
-├── dbscan_result/                # DBSCAN results (.xlsx per dataset)
+├── MDBSCAN_results.ipynb        # Notebook running MDBSCAN across all datasets
+├── dbscan_result/               # DBSCAN results (.xlsx per dataset)
 │   ├── synthetic.xlsx
 │   ├── jain.xlsx
 │   ├── isolation.xlsx
 │   └── compound.xlsx
-├── hdbscan_result/               # HDBSCAN results (.xlsx per dataset)
+├── hdbscan_result/              # HDBSCAN results (.xlsx per dataset)
 │   ├── synthetic.xlsx
 │   ├── jain.xlsx
 │   ├── isolation.xlsx
 │   └── compound.xlsx
-├── requirements.txt              # Required Python packages
+├── requirements.txt             # Required Python packages
 └── README.md
 ```
 
@@ -47,7 +53,7 @@ This repository includes the full implementation of VelvetFlow, hyperparameter t
 
 ## Datasets and Experiment Setup
 
-VelvetFlow was evaluated on four classical clustering benchmarks:
+VelvetFlow was evaluated on four classical clustering benchmarks, all located in the `dataset/` directory:
 
 ### 1. Synthetic Dataset
 
@@ -79,7 +85,7 @@ The `MDBSCAN_results.ipynb` notebook runs MDBSCAN **four times per dataset**, te
 Each `.xlsx` file includes:
 
 * NMI, ARI, Pairwise F1
-* Associated hyperparameters (e.g., eps, minPts)
+* Associated hyperparameters (e.g., `eps`, `minPts`)
 
 ### VelvetFlow
 
@@ -109,7 +115,7 @@ Each notebook includes:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/VelvetFlow.git
+git clone https://github.com/HosseinEyvazi/VelvetFlow.git
 cd VelvetFlow
 ```
 
@@ -160,5 +166,5 @@ This repository is released under the **MIT License**. See `LICENSE` for more de
 
 ## Acknowledgments
 
-VelvetFlow was developed by Hossein Eyvazi, Mohammad Badzohreh, and Seyed Ali Shahrokhi as part of their research in clustering algorithms and anomaly detection. We also acknowledge the creators of DBSCAN, HDBSCAN, and the benchmark datasets used in this project.
+VelvetFlow was developed by **Hossein Eyvazi**, **Mohammad Badzohreh**, and **Seyed Ali Shahrokhi** as part of their research in clustering algorithms and anomaly detection. We also acknowledge the creators of DBSCAN, HDBSCAN, and the benchmark datasets used in this project.
 
