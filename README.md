@@ -1,5 +1,5 @@
 
-# VelvetFlow: A Robust Multi-Density Clustering Pipeline
+# VelvetFlow: An Engineering Pipeline for Robust Multi-density Clustering
 
 ## Overview
 
